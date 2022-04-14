@@ -165,7 +165,7 @@ olacak şekilde **MATLAB**'da koşturursak aşağıdaki grafiği elde ederiz.
 <img src="figure/circuit_analysis_example_numerical_solution.gif" alt="devre analizi örneği MATLAB nümerik çözüm animasyonu" height="500"/></br>
 *Şekil 5*: Devre analizi örneği MATLAB'da gerçeklenmiş optimizasyon animasyonu.
 
-##### MATLAB kodu (Bu kod *Şekil 5*'deki animasyonu içermemektedir)
+##### MATLAB kodu
 ```
 clear all; close all; clc;
 R1 = 9; R2 = 4; R3 = 12; Vcc = 12;
@@ -182,46 +182,12 @@ for i=1:n
     x(:,i+1) = x(:,i) + alpha*A*(t-A*x(:,i));
     L(:,i+1) = 0.5*sum((t-A*x(:,i)).^2);
 end
-
-figure(1);
-subplot(3,2,1);
-plot(0:n, x(1,:), 'k.-');
-grid on; set(gca, 'gridlinestyle', '--');
-xlabel('iterasyon numarası')
-ylabel('x_1');
-subplot(3,2,2);
-plot(0:n, x(2,:), 'r.-');
-grid on; set(gca, 'gridlinestyle', '--');
-xlabel('iterasyon numarası')
-ylabel('x_2')
-subplot(3,2,3);
-plot(0:n, x(3,:), 'b.-');
-grid on; set(gca, 'gridlinestyle', '--');
-xlabel('iterasyon numarası');
-ylabel('x_3');
-subplot(3,2,4);
-hold on;
-plot3(x(1,:), x(2,:), x(3,:), 'k.-');
-plot3(x(1,1), x(2,1), x(3,1), 'ko', 'markersize', 8, 'markerface', 'r');
-plot3(x(1,end), x(2,end), x(3,end), 'ks', 'markersize', 8, 'markerface', 'g');
-hold off;
-grid on;  set(gca, 'gridlinestyle', '--');
-xlabel('x_1');
-ylabel('x_2');
-zlabel('x_3');
-legend('$\mathbf{x}$','$\mathbf{x_0}$', '$\mathbf{x^*}$');
-set(legend, 'interpreter', 'latex');
-view(3);
-subplot(3,2,5);
-plot(0:n, L, 'k.-');
-grid on; set(gca, 'gridlinestyle', '--');
-xlabel('iterasyon numarası');
-ylabel('L');
 ```
-Yukarıda verilen kodda animasyon kısmı yok. Video ve gif dosyası üreten kod için yukarıda **code** isimli dizine gidin ve ilgili MATLAB kodunu gerekli Boolean değişkenlerini **true** veya **false** yaparak koşturun. 
+Yukarıda verilen kodda grafik çizdirme ve animasyon kısmı yok. Grafiği çizdiren ve video/gif dosyalarını üreten kod için yukarıda **code** isimli dizine gidin ve ilgili MATLAB kodunu gerekli Boolean değişkenlerini **true** veya **false** yaparak koşturun. 
 
 Bu hafta tahtaya yazdığımız notları *Şekil 6*'de görebilirsiniz.
-<img src="lecture/third week.jpg" alt="üçüncü hafta tahta ders notu" height="500"/></br>
+<p align="center"><img src="lecture/third week.jpg" alt="üçüncü hafta tahta ders notu" width=%100 height=auto/></p>
+
 *Şekil 6*: Üçüncü hafta tahtaya yazdığımız ders notu.
 
 # 4. Hafta
@@ -230,4 +196,12 @@ Bu hafta geçen hafta devam ettiğimiz devre analizi örneğinin nümerik çöz�
 [![IMAGE ALT TEXT HERE](https://drive.google.com/uc?id=1oSYnE4rsbzrRNH9rQa0k0UHxS3ElgosI)](https://youtu.be/1PqLf-5npC0)
 
 # 5-6-7. Haftalar
-Bir boyutlu optimizasyon problemi üzerinde duracağız.
+Örnek bir 1-boyutlu optimizasyon problemi üzerinde durduk [1]. Şimdi burada ara sınavda karşımıza bir benzeri çıkabilecek örnek bir optimizasyon problemine bakacağız.
+
+Mahfoud bit coin'e yatırım yapıp oradan para kazanan bir arkadaşımız. Kullandığı bit coin uygulamasında son 10 saat için her 6 dakikada bir örnek (İng. sample) yakalıyan bir Python programı yazıyor ve bu programı koşturmasıyla elde ettiği veriye ilk önce bir model öngörüp (İng. prediction) ardından bu modeli optimize etmek ve duruma göre para yatırıp kârını artırmak istiyor. Mahfoud'un elde etmiş olduğu veri aşağıda *Şekil 7*'de gösterilmiştir.
+
+<p align="center"><img src="figure/bitcoin_example.png" alt="on saatlik bitcoin verisi" width=%100 height=auto></p>
+
+*Şekil 7*: Mahfoud'un kullandığı bitcoin uygulamasında yazmış olduğu Python kodu ile 10 saat boyunca her 6dk'da bir yakalamış olduğu veri. Dikkat edin, örnekler arası birleştirilmiş gözüküyor ama ara değerlere sahip değiliz. Bu sadece interpolasyon.
+# Referanslar
+[1] 1-boyutlu Optimizasyon Problemi - 
