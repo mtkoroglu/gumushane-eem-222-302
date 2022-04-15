@@ -198,10 +198,25 @@ Bu hafta geçen hafta devam ettiğimiz devre analizi örneğinin nümerik çöz�
 # 5-6-7. Haftalar
 Örnek bir 1-boyutlu optimizasyon problemi üzerinde durduk [1]. Şimdi burada ara sınavda karşımıza bir benzeri çıkabilecek örnek bir optimizasyon problemine bakacağız.
 
-Mahfoud bit coin'e yatırım yapıp oradan para kazanan bir arkadaşımız. Kullandığı bit coin uygulamasında son 10 saat için her 6 dakikada bir örnek (İng. sample) yakalıyan bir Python programı yazıyor ve bu programı koşturmasıyla elde ettiği veriye ilk önce bir model öngörüp (İng. prediction) ardından bu modeli optimize etmek ve duruma göre para yatırıp kârını artırmak istiyor. Mahfoud'un elde etmiş olduğu veri aşağıda *Şekil 7*'de gösterilmiştir.
+### Ara sınava yönelik örnek soru
+Mahfoud bit coin'e yatırım yapıp oradan para kazanan bir arkadaşımız. Kullandığı bit coin uygulamasında son 10 saat için her 20 dakikada bir örnek (İng. sample) yakalayan bir Python programı yazıyor ve bu programı koşturmasıyla elde ettiği veriye ilk önce bir model öngörüp (İng. prediction) ardından bu modeli optimize etmek ve duruma göre para yatırıp kârını artırmak istiyor. Mahfoud'un elde etmiş olduğu veri aşağıda *Şekil 7*'de gösterilmiştir.
 
 <p align="center"><img src="figure/bitcoin_example.png" alt="on saatlik bitcoin verisi" width=%100 height=auto></p>
 
-*Şekil 7*: Mahfoud'un kullandığı bitcoin uygulamasında yazmış olduğu Python kodu ile 10 saat boyunca her 6dk'da bir yakalamış olduğu veri. Dikkat edin, örnekler arası birleştirilmiş gözüküyor ama ara değerlere sahip değiliz. Bu sadece interpolasyon.
+*Şekil 7*: Mahfoud'un kullandığı bitcoin uygulamasında yazmış olduğu Python kodu ile 10 saat boyunca her 20dk'da bir yakalamış olduğu veri.
+
+#### Model Tahmini
+Elimizdeki veriye bakarak matematiksel bir model öngörmeye çalışalım. Polinom bilgilerimizi kullanacak olursak, sanki bu grafik 4. dereceden bir polinomu andırıyor diyebiliriz. O zaman modelimizi
+
+y = x<sup>4</sup> + ax<sup>3</sup> + bx<sup>2</sup> + cx + d
+
+olarak belirleyelim. Burada optimal değerini aradığımız parametre vektörü (a, b, c, d) olur ki bu da uğraştığımız problemin dört boyutlu bir optimizasyon problemi olduğunu gösterir. Parametre uzayında herhangi bir başlangıç koşulu (a<sub>0</sub>, b<sub>0</sub>, c<sub>0</sub>, d<sub>0</sub>) ile başlayıp çözüm (a<sup>\*</sup>, b<sup>\*</sup>, c<sup>\*</sup>, d<sup>\*</sup>)'e yakınsamak istiyoruz.
+
+#### Analitik Çözüm
+Mümkünse ilk önce analitik çözümü bulmak istiyoruz.
+
+#### Nümerik Çözüm
+Analitik çözüm elde edilemezse bile nümerik çözüm her zaman alternatif bir yol.
+
 # Referanslar
-[1] 1-boyutlu Optimizasyon Problemi - 
+[1] 1-boyutlu optimizasyon problemi - https://github.com/gumushane-eem-eesec-440/optimization-1d
