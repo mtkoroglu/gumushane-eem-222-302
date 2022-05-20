@@ -1,7 +1,6 @@
 # EESEC 222/312
 Merhaba arkadaşlar. Bu sayfada **EESEC 222/312 Sayısal Çözümleme** ders notlarına, derste yazdığımız **MATLAB** ve **Python** kodlarına ve sunumlara yukarıda gördüğünüz dosyalardan ulaşabilirsiniz. Derste işlediklerimizin özetini ve ilgili videoları aşağıda bulabilirsiniz. 
 
-## 1. Hafta
 Dilimize yabancı kaynaklardan girmiş **vasat** kelimesi üzerinden **optimizasyon** kavramına genel bir giriş yaptık. Aşağıda *Şekil 1*'de tahtanın sol tarafında çizilen grafikte elimizdeki model **y** = a**x** ve verilere (**x**,**y**) göre a parametresinin **optimal** (veya **optimum**) değerine a<sup>*</sup> denildiğini gördük. Burada **ekstrem** değerler olarak isimlendirilen a<sub>min</sub> ve a<sub>max</sub> uç değerleri temsil ediyorlardı.
 
 Optimizasyonun insanın hayatında da çok önemli bir yere sahip olduğunu *Şekil 1*'deki tahta ders notumuzda sağ tarafta **akıl** kavramı üzerinden verdiğimiz örnekle gördük. Burada aklı hiç kullanmama (minimum) ve en üst düzeyde kullanma (maximum) uç durumlarına ve de bu soyut kavramın optimal değeri gibi isimlendirilebilecek **wisdom** noktasına baktık.
@@ -9,8 +8,7 @@ Optimizasyonun insanın hayatında da çok önemli bir yere sahip olduğunu *Şe
 <img src="lecture/first week.jpg" alt="ilk hafta tahta ders notu" height="240"/></br>
 *Şekil 1*: İlk hafta tahtaya yazdığımız ders notu.
 
-## 2. Hafta
-Bu hafta aşağıda şeması verilen devrede V<sub>cc</sub>, R<sub>1</sub>, R<sub>2</sub> ve R<sub>3</sub> değerlerini bildiğimiz varsayarak V<sub>R<sub>1</sub></sub>, V<sub>R<sub>2</sub></sub> ve V<sub>R<sub>3</sub></sub> voltajlarını bulmak istiyoruz. Tabi 1/R<sub>eş</sub> = 1/R<sub>2</sub>+1/R<sub>3</sub> formülüyle R<sub>2</sub> ve R<sub>3</sub> dirençlerinin eşdeğer direnci bulunabilir ve gerilim bölücü (İng. voltage divider) devre mantığı kullanılarak her bir direncin üzerine düşen voltaj kolaylıkla hesaplanabilir. Ancak biz burada devreye Kirchoff'un voltaj ve akım yasalarını uygulayarak denklemler elde edip bu denklemleri doğrusal cebir dersinde öğrendiğimiz matris ve vektör gösterimlerini kullanarak çözmek istiyoruz. Bu şekilde formülle elde edilebilen çözümlere **analitik çözüm** dendiğini derste söylemiştik. Eğer formülle çözümü bir seferde elde edemiyor olsaydık o zaman **nümerik çözüm** metodlarından birisini kullanarak adım adım çözüme ulaşmaya çalışacaktık.
+Aşağıda şeması verilen devrede V<sub>cc</sub>, R<sub>1</sub>, R<sub>2</sub> ve R<sub>3</sub> değerlerini bildiğimiz varsayarak V<sub>R<sub>1</sub></sub>, V<sub>R<sub>2</sub></sub> ve V<sub>R<sub>3</sub></sub> voltajlarını bulmak istiyoruz. Tabi 1/R<sub>eş</sub> = 1/R<sub>2</sub>+1/R<sub>3</sub> formülüyle R<sub>2</sub> ve R<sub>3</sub> dirençlerinin eşdeğer direnci bulunabilir ve gerilim bölücü (İng. voltage divider) devre mantığı kullanılarak her bir direncin üzerine düşen voltaj kolaylıkla hesaplanabilir. Ancak biz burada devreye Kirchoff'un voltaj ve akım yasalarını uygulayarak denklemler elde edip bu denklemleri doğrusal cebir dersinde öğrendiğimiz matris ve vektör gösterimlerini kullanarak çözmek istiyoruz. Bu şekilde formülle elde edilebilen çözümlere **analitik çözüm** dendiğini derste söylemiştik. Eğer formülle çözümü bir seferde elde edemiyor olsaydık o zaman **nümerik çözüm** metodlarından birisini kullanarak adım adım çözüme ulaşmaya çalışacaktık.
 
 ### Kirchoff Kanunları ile Devre Analizi Örneği
 
@@ -61,7 +59,6 @@ olarak yazılabilir. Bu kodlara yukarıda **code** olarak isimlendirilmiş dizin
 
 [![IMAGE ALT TEXT HERE](figure/devreLQ.jpg)](https://youtu.be/69PK49Cq41w)
 
-## 3. Hafta
 ### Kirchoff Kanunları ile Devre Analizi Örneği - devam
 Bu hafta ikinci hafta üzerinde durduğumuz rezistif devrede elde ettiğimiz **x**<sup>*</sup> ≜ (V<sup>*</sup><sub>R<sub>1</sub></sub>, V<sup>*</sup><sub>R<sub>2</sub></sub>, V<sup>*</sup><sub>R<sub>3</sub></sub>) = (9,3,3) çözümünü bu sefer analitik olarak değil de **nümerik** (yani **sayısal**) olarak elde etmeye çalışacağız. Geçen hafta doğrusal cebir bilgilerimizi kullanarak elde ettiğimiz
 
@@ -190,33 +187,74 @@ Bu hafta tahtaya yazdığımız notları *Şekil 6*'de görebilirsiniz.
 
 *Şekil 6*: Üçüncü hafta tahtaya yazdığımız ders notu.
 
-# 4. Hafta
 Bu hafta geçen hafta devam ettiğimiz devre analizi örneğinin nümerik çözümünün bilgisayarda MATLAB ile çözdürülmesini gördük. İlgili video aşağıdaki resme tıklanınca izlenebilir.
 
 [![IMAGE ALT TEXT HERE](https://drive.google.com/uc?id=1oSYnE4rsbzrRNH9rQa0k0UHxS3ElgosI)](https://youtu.be/1PqLf-5npC0)
 
-# 5-6-7. Haftalar
 Örnek bir 1-boyutlu optimizasyon problemi üzerinde durduk [1]. Şimdi burada ara sınavda karşımıza bir benzeri çıkabilecek örnek bir optimizasyon problemine bakacağız.
 
-### Ara sınava yönelik örnek soru
-Mahfoud bit coin'e yatırım yapıp oradan para kazanan bir arkadaşımız. Kullandığı bit coin uygulamasında son 10 saat için her 20 dakikada bir örnek (İng. sample) yakalayan bir Python programı yazıyor ve bu programı koşturmasıyla elde ettiği veriye ilk önce bir model öngörüp (İng. prediction) ardından bu modeli optimize etmek ve duruma göre para yatırıp kârını artırmak istiyor. Mahfoud'un elde etmiş olduğu veri aşağıda *Şekil 7*'de gösterilmiştir.
+### Bitcoin Örneği
+<p align="justify">Mahfoud bit coin'e yatırım yapıp oradan para kazanan bir arkadaşımız. Kullandığı bit coin uygulamasında son 10 saat için her 20 dakikada bir örnek (İng. sample) yakalayan bir Python programı yazıyor ve bu programı koşturmasıyla elde ettiği veriye ilk önce bir model öngörüp (İng. prediction) ardından bu modeli optimize etmek ve duruma göre para yatırıp kârını artırmak istiyor. Mahfoud'un elde etmiş olduğu veri aşağıda <i>Şekil 7</i>'de gösterilmiştir.</p>
 
 <p align="center"><img src="figure/bitcoin_example.png" alt="on saatlik bitcoin verisi" width=%100 height=auto></p>
 
-*Şekil 7*: Mahfoud'un kullandığı bitcoin uygulamasında yazmış olduğu Python kodu ile 10 saat boyunca her 20dk'da bir yakalamış olduğu veri.
+<p align="justify"><b>Şekil 7</b>: Mahfoud'un kullandığı bitcoin uygulamasında 10 saat boyunca her 20dk'da bir yakalamış olduğu veri.</p>
 
-#### Model Tahmini
-Elimizdeki veriye bakarak matematiksel bir model öngörmeye çalışalım. Polinom bilgilerimizi kullanacak olursak, sanki bu grafik 4. dereceden bir polinomu andırıyor diyebiliriz. O zaman modelimizi
+### Model Tahmini
+<p align="justify">Elimizdeki veriye bakarak matematiksel bir model tahmin etmeye (öngörmeye) çalışalım. Şekildeki fonksiyon y=0'dan dört kere geçiyor. Polinom bilgilerimizi kullanacak olursak, sanki bu grafiğin 4. dereceden bir polinom olduğunu söyleyebiliriz. O zaman modelimizi</p>
 
-y = x<sup>4</sup> + ax<sup>3</sup> + bx<sup>2</sup> + cx + d
+<p align="center">y = ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e</p>
 
-olarak belirleyelim. Burada optimal değerini aradığımız parametre vektörü (a, b, c, d) olur ki bu da uğraştığımız problemin dört boyutlu bir optimizasyon problemi olduğunu gösterir. Parametre uzayında herhangi bir başlangıç koşulu (a<sub>0</sub>, b<sub>0</sub>, c<sub>0</sub>, d<sub>0</sub>) ile başlayıp çözüm (a<sup>\*</sup>, b<sup>\*</sup>, c<sup>\*</sup>, d<sup>\*</sup>)'e yakınsamak istiyoruz.
+<p align="justify">olarak önerelim. Burada optimal değerini aradığımız parametre vektörü (a, b, c, d, e) olur ki bu da uğraştığımız problemin beş boyutlu bir optimizasyon problemi olduğunu gösterir. Parametre uzayında herhangi bir başlangıç koşulu (a<sub>0</sub>, b<sub>0</sub>, c<sub>0</sub>, d<sub>0</sub>) ile başlayıp çözüm (a<sup>*</sup>, b<sup>*</sup>, c<sup>*</sup>, d<sup>*</sup>, e<sup>*</sup>)'e yakınsamak istiyoruz.</p>
+
+
+#### Nümerik Çözüm
+<p align="justify">Yine Eğim Düşümü (Gradient Descent) isimli algoritma ile en küçük kareler yaklaşımıyla iterasyonlarla (yani adım adım) çözüme yakınsamaya çalışacağız.</p>
+
+<p align="center"><img src="figure/bitcoin example.jpg" alt="bitcoin örneği için tahmin edilen model" width=%100 height=auto></p>
+
+<p align="justify">Yukarıda şekilde görüldüğü gibi her adımda (optimal değerlerini aradığımız) parametreleri güncelleyeceğiz. O andaki adım numarası k ve bir sonraki andaki (veya iterasyondaki) adım numarası k+1 ise o zaman güncellemeleri aşağıdaki gibi yazabiliriz.</p>
+
+a<sub>k+1</sub> = a<sub>k</sub> + Δa<sub>k</sub></br>
+b<sub>k+1</sub> = b<sub>k</sub> + Δb<sub>k</sub></br>
+c<sub>k+1</sub> = c<sub>k</sub> + Δc<sub>k</sub></br>
+d<sub>k+1</sub> = d<sub>k</sub> + Δd<sub>k</sub></br>
+e<sub>k+1</sub> = e<sub>k</sub> + Δe<sub>k</sub>
+
+<p align="justify">Burada parametre vektörü tanımlayalım.</p>
+
+**p** ≜ (a,b,c,d,e)<sup>T</sup>
+
+<p align="justify">Parametre uzayında rasgele bir <b>p<sub>0</sub></b> başlangıç koşulundan başlayıp <b>p<sup>*</sup></b> optimal vektörüne yakınsamak istiyoruz. Eğim düşümü yönetimde kullandığımız eşitlikleri tekrar yazalım.</p>
+
+<p align="center">L = 0.5e<sup>2</sup></p></br>
+<p align="center">e = t-y</p></br>
+<p align="center">y = ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e</p>
+
+<p align="justify">Parametre vektörünü tanımladığımızdan dolayı çıkış denklemini aşağıdaki gibi tekrar yazabiliriz.</p>
+
+<p align="center"><b>y</b> = (x<sup>4</sup> x<sup>3</sup> x<sup>2</sup> x 1)<b>p</b></p>
+
+<p align="justify">Şimdi güncelleme ifadelerini tekrar yazmak için Eğim Düşümü yönteminde karşımıza çıkacak kısmi türev ifadelerini türetelim.</p>
+
+<p align="center">∂L/∂a = ∂L/∂e ∂e/∂y ∂y/∂a = e(-1)x<sup>4</sup> = -(ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e - t)x<sup>4</sup></p>
+
+<p align="center">∂L/∂b = ∂L/∂e ∂e/∂y ∂y/∂b = e(-1)x<sup>3</sup> = -(ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e - t)x<sup>3</sup></p>
+
+<p align="center">∂L/∂c = ∂L/∂e ∂e/∂y ∂y/∂c = e(-1)x<sup>2</sup> = -(ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e - t)x<sup>2</sup></p>
+
+<p align="center">∂L/∂d = ∂L/∂e ∂e/∂y ∂y/∂d = e(-1)x = -(ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e - t)x<sup>2</sup></p>
+
+<p align="center">∂L/∂e = ∂L/∂e ∂e/∂y ∂y/∂e = e(-1)x<sup>2</sup> = -(ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e - t)</p>
+
+Parametre güncelleme ifadelerinde yerlerine koyalım.
+
+<p align="center">Δa<sub>k+1</sub> = Δa<sub>k</sub> - α∂L/∂a = Δa<sub>k</sub> + α(ax<sup>4</sup> + bx<sup>3</sup> + cx<sup>2</sup> + dx + e - t)x<sup>4</sup></p>
+
+
 
 #### Analitik Çözüm
 Mümkünse ilk önce analitik çözümü bulmak istiyoruz.
-
-#### Nümerik Çözüm
-Analitik çözüm elde edilemezse bile nümerik çözüm her zaman alternatif bir yol.
 
 # Referanslar
 [1] 1-boyutlu optimizasyon problemi - https://github.com/gumushane-eem-eesec-440/optimization-1d
